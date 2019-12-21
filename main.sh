@@ -23,6 +23,8 @@ SCRIPT_DIR=$(dirname -- "$(readlink -f "${BASH_SOURCE[0]}" || realpath "${BASH_S
 main() {
     args=()
 
+    env
+
     if [[ -n "${INPUT_VERSION:-}" ]]; then
         args+=(--version "${INPUT_VERSION}")
     fi
@@ -51,6 +53,7 @@ main() {
         args+=(--install-local-path-provisioner)
     fi
 
+    echo "${args[@]}"
     "$SCRIPT_DIR/kind.sh" "${args[@]}"
 }
 

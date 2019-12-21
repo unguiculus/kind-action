@@ -9,15 +9,15 @@ inputs:
     description: "The kind version to use (default: v0.6.1)"
   config:
     description: "The path to the kind config file"
-  node_image:
+  node-image:
     description: "The Docker image for the cluster nodes"
-  cluster_name:
+  cluster-name:
     description: "The name of the cluster to create (default: chart-testing)"
   wait:
     description: "The duration to wait for the control plane to become ready (default: 60s)"
-  log_level:
+  log-level:
     description: "The log level for kind"
-  install_local_path_provisioner:
+  install-local-path-provisioner:
     description: |
       If true, Rancher's local-path provisioner is installed which supports
       dynamic volume provisioning on multi-node clusters. The newly created
